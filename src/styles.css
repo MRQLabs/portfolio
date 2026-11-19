@@ -34,6 +34,7 @@ body{min-width:0}
 .hero-stats{background:linear-gradient(90deg,#090909b8,#090909e8);padding-inline:12px;margin-left:-12px;margin-right:-12px}
 @media(max-width:600px){.hero-title{font-size:23.8vw}.hero-side{bottom:285px}}
 @media(max-width:370px){.hero-side{bottom:280px}}
+.brand-photo{display:flex;justify-content:center;margin:0;padding:16px;border:1px solid var(--line);background:#0c0c0c}.brand-photo img{display:block;width:auto;max-width:100%;height:auto;max-height:min(72vh,760px);object-fit:contain}
 .wordmark{min-height:44px;align-items:center}.wordmark>span{align-self:flex-start;margin-top:9px}.filters button{min-width:44px;padding-inline:3px}
 @media(max-width:600px){.menu-toggle{width:44px;min-width:44px}.footer>div>a{width:44px}.project-brief input,.project-brief textarea,.project-brief select{scroll-margin-top:90px}}
 @media(max-width:600px){.brand-heading .icon-button{width:44px;min-width:44px}.brand-pause{display:inline-flex}}
