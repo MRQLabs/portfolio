@@ -189,7 +189,16 @@ function About() {
     <div className="studio-grid">
       <Reveal className="education-panel"><h3 className="panel-heading">EDUCATION & SKILLS</h3><p className="eyebrow accent">PENDIDIKAN</p><div className="education-row"><strong>Sunan Drajat Vocational High School</strong><span>Lamongan</span></div><div className="education-row"><strong>Tuban Institute of Technology and Business</strong><span>Tuban</span></div><p className="eyebrow accent skills-heading">CREATIVE TOOLKIT</p><div className="skill-tags">{['Laravel & React', 'JavaScript', 'Tailwind CSS', 'PHP', 'MySQL', 'Git & GitHub', 'Full-Stack Development', 'Web Development', 'CorelDRAW', 'CapCut', 'Desain Grafis'].map(s => <span key={s}>{s}</span>)}</div><div className="software-row">{[].map(([file, name]) => <img key={file} src={`./Asset/svg/${file}.svg`} alt={name} title={name} loading="lazy" width="28" height="28"/>)}</div></Reveal>
       <div className="process-panel"><Reveal><h3 className="panel-heading">FROM IDEA TO FINAL FRAME</h3></Reveal><div className="process-list"><div className="process-track"><motion.div style={{ scaleY: enabled ? scrollYProgress : 1 }}/></div>{processSteps.map(([num, title, text], i) => <Reveal key={num} className="process-row" delay={i * 0.035}><span className="process-num display">{num}</span><span className="process-node"/><div><h4>{title}</h4><p>{text}</p></div></Reveal>)}</div></div>
-      <Reveal className="quote-panel"><span className="quote-mark display">“</span><blockquote>Dari konsep<br/>dan storytelling,<br/><em>sampai visual<br/>yang sinematik.</em></blockquote><span className="handwriting">Rizqi</span><div className="quote-bottom">LET’S MAKE<br/>THE NEXT FRAME COUNT.<span className="quote-symbol" aria-hidden="true">✳</span></div></Reveal>
+      <Reveal className="quote-panel">
+  <span className="quote-mark display">“</span>
+  <blockquote>
+    <span dir="rtl" lang="ar" className="arabic-quote">
+      كُنْ أَثَرًا جَمِيلًا
+    </span>
+    <br />
+    <em>"Jadilah jejak (karya) yang indah."</em>
+  </blockquote>
+  <span className="handwriting">Alfarizqi</span><div className="quote-bottom">LET’S MAKE<br/>THE NEXT FRAME COUNT.<span className="quote-symbol" aria-hidden="true">✳</span></div></Reveal>
     </div>
   </section>;
 }
@@ -214,7 +223,7 @@ function Contact({ onProject }) {
   };
   return <section id="contact" className="contact section-wrap">
     <div className="contact-grid"><Reveal className="contact-intro"><span className="eyebrow">04 / YOUR NEXT STORY</span><h2 className="display">LET’S WORK<br/>TOGETHER<span className="accent">.</span></h2><p>Punya cerita yang ingin diwujudkan?<br/>Mari buat sesuatu yang layak ditonton.</p><Magnetic href="https://wa.me/62895367015626" target="_blank" rel="noopener noreferrer" className="contact-cta"><span className="round-arrow"><ArrowUpRight size={21}/></span>MULAI PERCAKAPAN</Magnetic></Reveal>
-    <Reveal className="contact-links" delay={0.1}><a href="mailto:arizqiboy@gmail.com"><Mail/><span><small>EMAIL</small>arizqiboy@gmail.com</span><ArrowUpRight size={16}/></a><a href="https://github.com/rizqimr" target="_blank" rel="noopener noreferrer"><Github/><span><small>GITHUB</small>@rizqimr</span><ArrowUpRight size={16}/></a><a href="https://linkedin.com/in/rizqimr" target="_blank" rel="noopener noreferrer"><Linkedin/><span><small>LINKEDIN</small>linkedin.com/in/rizqimr</span><ArrowUpRight size={16}/></a><div><MapPin/><span><small>BASED IN</small>Tuban, Indonesia</span></div></Reveal>
+    <Reveal className="contact-links" delay={0.1}><a href="mailto:arizqiboy@gmail.com"><Mail/><span><small>EMAIL</small>arizqiboy@gmail.com</span><ArrowUpRight size={16}/></a><a href="https://github.com/rizqimr" target="_blank" rel="noopener noreferrer"><Github/><span><small>GITHUB</small>@mrqlabs</span><ArrowUpRight size={16}/></a><a href="https://linkedin.com/in/rizqimr" target="_blank" rel="noopener noreferrer"><Linkedin/><span><small>LINKEDIN</small>linkedin.com/in/rizqimr</span><ArrowUpRight size={16}/></a><div><MapPin/><span><small>BASED IN</small>Tuban, Indonesia</span></div></Reveal>
     <Reveal className="contact-reel" delay={0.2}><button onClick={() => onProject(featured[0])} aria-label="Putar Web projects Rizqi"><div className="reel-screen"><span className="reel-screen-top">RIZQI®<span>WEB / PROJECTS</span></span><MediaImage src={featured[0]?.image} alt="Web projects Rizqi"/><span className="reel-screen-title display">MAKE IT<br/><span>FEEL REAL.</span></span><span className="play-circle"><Play size={18} fill="currentColor"/></span></div><span className="reel-caption">PRESS PLAY. ENTER MY WORLD.</span></button></Reveal></div>
     <Reveal><details className="project-brief"><summary>Ceritakan proyek Anda <Plus size={19}/></summary><form onSubmit={send}><label>Nama Anda<input name="name" required placeholder="Nama atau brand" autoComplete="name" maxLength="100"/></label><label>Jenis proyek<select name="type"><option>Website Development</option><option>Laravel & React</option><option>Web Application</option><option>Commercial Content</option><option>Full-Stack Development</option><option>Website</option><option>Kolaborasi lainnya</option></select></label><label className="brief-message">Tentang proyek<textarea name="message" required rows="3" placeholder="Ceritakan ide, kebutuhan, dan perkiraan waktunya…" maxLength="3000"/></label><button className="solid-button" type="submit">Lanjut ke WhatsApp <ArrowUpRight size={18}/></button><p className="form-note" role="status">{sent ? 'Draft pesan siap di WhatsApp. Tekan Kirim di sana untuk memulai percakapan.' : 'Brief akan dibuka sebagai draft pesan di WhatsApp.'}</p></form></details></Reveal>
   </section>;
@@ -300,7 +309,7 @@ function App() {
         <a className="wordmark" href="#home">MRQLabs<span>®</span></a>
         <span>© {new Date().getFullYear()} MRQLabs. BUILDING FOR THE WEB.</span>
         <div>
-          <a href="https://github.com/rizqimr" target="_blank" rel="noopener noreferrer" aria-label="GitHub @rizqimr"><Github size={17}/></a>
+          <a href="https://github.com/rizqimr" target="_blank" rel="noopener noreferrer" aria-label="GitHub @mrqlabs"><Github size={17}/></a>
           <a href="https://linkedin.com/in/rizqimr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn M. Rizqi"><Linkedin size={17}/></a>
           <a href="#home" aria-label="Kembali ke atas"><ArrowUpRight size={18}/></a>
         </div>
